@@ -6,7 +6,7 @@
 <title>내 멜로디는 어디로 갔을까</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700;800&family=Gothic+A1:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700;800&family=Gothic+A1:wght@400;600;800;900&display=swap">
 <style>
 /* Layout: one long thermal-receipt strip on a dark counter; credits read like line items, names sit where the amount would be. */
 :root {
@@ -54,14 +54,14 @@ body {
 .eyebrow { font-family: var(--font-brand); font-weight: 800; font-size: 13px; letter-spacing: 0.18em; }
 h1 {
   margin: 0;
-  font-family: var(--font-body);
+  font-family: var(--font-brand);
   font-weight: 800;
-  font-size: clamp(26px, 7vw, 34px);
-  line-height: 1.25;
-  letter-spacing: -0.02em;
+  font-size: clamp(28px, 7.5vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   text-wrap: balance;
 }
-.sub { font-family: var(--font-brand); font-weight: 700; font-size: 14px; color: var(--ink-soft); }
+.sub { font-family: var(--font-body); font-weight: 400; font-size: 15px; color: var(--ink-soft); }
 
 .bar {
   background: var(--ink);
@@ -120,6 +120,7 @@ p { margin: 0; max-width: 62ch; }
 }
 .box::after { content: ""; width: 8px; height: 8px; background: var(--ink); }
 .small { font-size: 12.5px; color: var(--ink-soft); }
+.data-note, .about p { font-size: 14px; color: var(--ink); }
 
 .contact { display: flex; flex-direction: column; gap: 8px; }
 .contact .row { align-items: center; flex-wrap: wrap; }
@@ -152,34 +153,31 @@ p { margin: 0; max-width: 62ch; }
   <header class="head">
     <svg width="64" height="28" viewBox="0 0 92 40" aria-hidden="true"><path d="M6 10 C 14 2, 18 34, 26 34 S 38 10, 46 10 S 58 34, 66 34 S 78 2, 86 10" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg>
     <div class="eyebrow">CREDITS</div>
-    <h1>〈내 멜로디는 어디로 갔을까〉</h1>
-    <div class="sub">Where did my melody go?</div>
+    <h1>Where did my melody go?</h1>
+    <div class="sub">내 멜로디는 어디로 갔을까</div>
   </header>
 
-  <div class="bar">THIS PAGE IS NOT A RECEIPT</div>
+  <div class="bar">ALL NAMES CREDITED</div>
 
   <div class="meta">
-    <div><span>EXHIBITION :</span><span>[2026 졸업전시명]</span></div>
-    <div><span>DATE :</span><span>[2026. 11. 00 – 11. 00]</span></div>
-    <div><span>PLACE :</span><span>[전시 장소]</span></div>
-    <div><span>DEPT. :</span><span>[학교 · 학과]</span></div>
+    <div><span>EXHIBITION :</span><span>[2026 문화테크노학과 11회 졸업전시 RE:BURST]</span></div>
+    <div><span>DATE :</span><span>[2026. 11. 25 – 11. 28]</span></div>
+    <div><span>PLACE :</span><span>[국립창원대학교 BAC 2층 조현욱 아트홀]</span></div>
+    <div><span>DEPT. :</span><span>[국립창원대학교 · 문화테크노학과]</span></div>
   </div>
 
   <section class="about">
     <h2><span>ABOUT THE WORK</span><span class="r">작품 소개</span></h2>
-    <p>관람자는 작곡가가 되어 멜로디를 만들고, 소리와 제목과 활동명을 고르고, 앨범 자켓을 찍어 첫 싱글을 발매합니다. 발매 직전의 약관에는 '콘텐츠 활용 동의'가 미리 체크되어 있습니다. 석 달 뒤, 음원 차트 1위에는 AI 가수 NOVA의 신곡이 올라 있고 그 안에서 익숙한 멜로디가 흘러나옵니다.</p>
+    <p>관람자는 작곡가가 되어 멜로디를 만들고, 소리를 고르고, 제목과 활동명을 지은 뒤 앨범 자켓을 찍어 첫 싱글을 발매합니다. 발매 직전의 약관에는 '콘텐츠 활용 동의'가 미리 체크되어 있습니다. 석 달 뒤, 음원 차트 1위에는 AI 가수 NOVA의 신곡이 올라 있고, 그 곡에서 어딘가 익숙한 멜로디가 흘러나옵니다.</p>
     <p>이 작품은 생성형 AI가 수많은 창작물을 학습해 새 곡을 만드는 지금, 원작자의 동의와 몫은 어디에 있는지 묻습니다. 관람자가 만든 멜로디는 실제로 전시 안에 남아, 다음 관람자가 듣게 될 1위 곡의 재료가 됩니다.</p>
   </section>
 
   <section>
     <h2><span>ROLE</span><span class="r">NAME</span></h2>
     <ul class="lines">
-      <li><span class="role">기획 · 연출</span><span class="dots"></span><span class="name">[작가명]</span></li>
-      <li><span class="role">인터랙션 개발</span><span class="dots"></span><span class="name">[이름]</span></li>
-      <li><span class="role">사운드 디자인</span><span class="dots"></span><span class="name">[이름]</span></li>
-      <li><span class="role">그래픽 · 영수증 디자인</span><span class="dots"></span><span class="name">[이름]</span></li>
-      <li><span class="role">지도교수</span><span class="dots"></span><span class="name">[이름]</span></li>
-      <li><span class="role">도움 주신 분</span><span class="dots"></span><span class="name">[이름, 이름]</span></li>
+      <li><span class="role">기획 · 개발 · 사운드 · 디자인</span><span class="dots"></span><span class="name">[김현빈]</span></li>
+      <li><span class="role">지도교수</span><span class="dots"></span><span class="name">[남상훈]</span></li>
+      <li><span class="role">도움 주신 분</span><span class="dots"></span><span class="name">[변의주]</span></li>
       <li><span class="role">NOVA</span><span class="dots"></span><span class="name">관람자 여러분<span class="note">이 곡의 멜로디를 만든 모든 사람</span></span></li>
     </ul>
     <div class="total"><span>NAMES CREDITED :</span><span>ALL</span></div>
@@ -189,28 +187,20 @@ p { margin: 0; max-width: 62ch; }
     <h2><span>MADE WITH</span><span class="r">사용한 도구</span></h2>
     <ul class="lines">
       <li><span class="role">제작 환경</span><span class="dots"></span><span class="name">Processing</span></li>
-      <li><span class="role">사운드 라이브러리</span><span class="dots"></span><span class="name">Processing Sound</span></li>
-      <li><span class="role">샘플 사운드</span><span class="dots"></span><span class="name">[샘플팩 이름 · 제작사]</span></li>
-      <li><span class="role">서체</span><span class="dots"></span><span class="name">Montserrat Alternates, Pretendard<span class="note">SIL Open Font License</span></span></li>
-      <li><span class="role">wavelet 로고</span><span class="dots"></span><span class="name">[제작자]</span></li>
-    </ul>
+      <li><span class="role">사운드 라이브러리</span><span class="dots"></span><span class="name">Processing Sound</span></li>      <li><span class="role">음악</span><span class="dots"></span><span class="name">Suno v6</span></li>
+      <li><span class="role">사진</span><span class="dots"></span><span class="name">ChatGPT · GPT-6 Astra Light</span></li>
+      <li><span class="role">서체</span><span class="dots"></span><span class="name">Montserrat Alternates, Pretendard<span class="note">SIL Open Font License</span></span></li>    </ul>
   </section>
 
   <section>
     <h2><span>YOUR DATA</span><span class="r">관람 데이터 안내</span></h2>
-    <p>[전시에서 촬영한 앨범 자켓 사진과 입력한 멜로디, 활동명, 곡 제목을 어디에 얼마나 보관하는지, 전시가 끝난 뒤 어떻게 처리하는지 적어 주세요.]</p>
-    <p class="small">예: 촬영한 사진은 영수증 출력에만 쓰이고 전시 컴퓨터에 저장되지 않습니다. 멜로디는 전시 기간에만 보관되며 전시 종료 후 모두 삭제됩니다.</p>
+    <p class="data-note">촬영한 사진은 영수증 출력에만 쓰이고 전시 컴퓨터에 저장되지 않습니다. 멜로디는 전시 기간에만 보관되며 전시 종료 후 모두 삭제됩니다.</p>
   </section>
-
-  <div class="consent">
-    <div class="check"><span class="box" aria-hidden="true"></span><span>위에 적힌 모든 이름은 본인에게 직접 묻고, 동의를 받은 뒤 기재했습니다.</span></div>
-    <div class="small">이 체크는 미리 되어 있지 않았습니다.</div>
-  </div>
 
   <section class="contact">
     <h2><span>CONTACT</span><span class="r">연락처</span></h2>
-    <div class="row"><code id="contact-insta">[@instagram_id]</code><button class="copy" type="button" id="copy-insta" data-target="contact-insta">COPY</button></div>
-    <div class="row"><code id="contact-mail">[email@example.com]</code><button class="copy" type="button" id="copy-mail" data-target="contact-mail">COPY</button></div>
+    <div class="row"><code id="contact-insta">[@_binnm_]</code><button class="copy" type="button" id="copy-insta" data-target="contact-insta">COPY</button></div>
+    <div class="row"><code id="contact-mail">[hb1121liz@gmail.com]</code><button class="copy" type="button" id="copy-mail" data-target="contact-mail">COPY</button></div>
   </section>
 
   <div class="barcode" aria-hidden="true"></div>
