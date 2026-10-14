@@ -48,24 +48,24 @@ body {
     conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / var(--tooth) 51% repeat-x;
 }
 @media (max-width: 480px) {
-  .strip { padding: 52px 24px 44px; gap: 48px; }
-  .meta div { flex-direction: column; gap: 0; }
-  .meta span:first-child { font-family: var(--font-brand); font-weight: 800; font-size: 11px; letter-spacing: 0.12em; color: var(--ink-soft); }
-  .meta span:last-child { text-align: left; }
+  .strip { padding: 52px 20px 44px; gap: 48px; }
+  .strip .meta { font-size: 13px; }
+  .strip .meta div { grid-template-columns: 78px minmax(0, 1fr); column-gap: 8px; }
 }
 
 .head { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
 .head svg { display: block; }
-.eyebrow { font-family: var(--font-brand); font-weight: 800; font-size: 13px; letter-spacing: 0.18em; }
+.eyebrow { margin-bottom: 20px; font-family: var(--font-brand); font-weight: 800; font-size: 13px; letter-spacing: 0.18em; }
 h1 {
   margin: 0;
   font-family: var(--font-brand);
   font-weight: 800;
-  font-size: clamp(28px, 7.5vw, 38px);
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  font-size: clamp(28px, 9.2vw, 54px);
+  line-height: 0.92;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
+h1 .nw { white-space: nowrap; }
 .sub { font-family: var(--font-body); font-weight: 400; font-size: 15px; color: var(--ink-soft); }
 
 .bar {
@@ -79,9 +79,11 @@ h1 {
   letter-spacing: 0.08em;
 }
 
-.meta { display: flex; flex-direction: column; gap: 10px; font-size: 14px; font-variant-numeric: tabular-nums; }
-.meta div, .row { display: flex; justify-content: space-between; gap: 16px; }
+.meta { display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.5; font-variant-numeric: tabular-nums; }
+.meta div { display: grid; grid-template-columns: 96px minmax(0, 1fr); column-gap: 12px; align-items: baseline; }
+.meta span:first-child { font-family: var(--font-brand); font-weight: 800; font-size: 11px; letter-spacing: 0.1em; color: var(--ink-soft); white-space: nowrap; }
 .meta span:last-child { text-align: right; }
+.row { display: flex; justify-content: space-between; gap: 16px; }
 
 section { display: flex; flex-direction: column; gap: 18px; }
 h2 {
@@ -160,14 +162,12 @@ p { margin: 0; max-width: 62ch; }
   <header class="head">
     <svg width="64" height="28" viewBox="0 0 92 40" aria-hidden="true"><path d="M6 10 C 14 2, 18 34, 26 34 S 38 10, 46 10 S 58 34, 66 34 S 78 2, 86 10" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg>
     <div class="eyebrow">CREDITS</div>
-    <h1>Where did my melody go?</h1>
-    <div class="sub">내 멜로디는 어디로 갔을까</div>
-  </header>
+    <h1><span class="nw">Where did</span><br><span class="nw">my melody go?</span></h1>  </header>
 
   <div class="bar">ALL NAMES CREDITED</div>
 
   <div class="meta">
-    <div><span>EXHIBITION :</span><span>2026 문화테크노학과 11회 졸업전시 RE:BURST</span></div>
+    <div><span>EXHIBITION :</span><span>2026 문화테크노학과 졸업전시 RE:BURST</span></div>
     <div><span>DATE :</span><span>2026. 11. 25 – 11. 28</span></div>
     <div><span>PLACE :</span><span>국립창원대학교 BAC 2층 조현욱 아트홀</span></div>
     <div><span>DEPT. :</span><span>국립창원대학교 · 문화테크노학과</span></div>
